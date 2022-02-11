@@ -22,6 +22,41 @@ class HierarchyAnalysisMatrix:
                                                                columns=examples,
                                                                index=examples)
 
+    def addFeature(self, feature):
+        self._matrix_features[feature] = np.zeros(len(self._features))
+        self._features.append(feature)
+        to_add = {}
+        for feature1 in self._features:
+            to_add[feature1] = [0]
+
+        to_add_df = pd.DataFrame.from_dict(to_add)
+
+        self._matrix_features = pd.concat([self._matrix_features, to_add_df], ignore_index=True, axis=0)
+        self._matrix_features.index = self._features
+        self._matrix_features.at[feature, feature] = 1
+
+        self._dict_matrix_examples[feature] = pd.DataFrame(data=np.eye(len(self._examples)),
+                                                           columns=self._examples,
+                                                           index=self._examples)
+
+    def addExample(self, example):
+        self._examples.append(example)
+        for feature in self._features:
+            self._dict_matrix_examples[feature][example] = np.zeros(len(self._examples)-1)
+            to_add = {}
+            for example in self._examples:
+                to_add[example] = [0]
+
+            to_add_df = pd.DataFrame.from_dict(to_add)
+            self._dict_matrix_examples[feature] = pd.concat(
+                [self._dict_matrix_examples[feature], to_add_df],
+                ignore_index=True,
+                axis=0)
+
+            self._dict_matrix_examples[feature].index = self._examples
+
+            self._dict_matrix_examples[feature].at[example, example] = 1
+
     def set_value_feature(self, dominant_feature: str, recessive_feature: str, value: float):
         self._matrix_features.at[recessive_feature, dominant_feature] = value
         self._matrix_features.at[dominant_feature, recessive_feature] = 1 / value
@@ -99,7 +134,7 @@ class HierarchyAnalysisMatrix:
         concord_index = (eigen_value - n) / (n - 1)
         concord_estimate = concord_index / HierarchyAnalysisMatrix._rand_concord_table[n] * 100
         return pd.Series([eigen_value, concord_index, concord_estimate],
-                         index=['EigenValue', 'ConcordIndex', 'ConcordIndex'])
+                         index=['EigenValue', 'ConcordIndex', 'ConcordEstimate'])
 
     @staticmethod
     def _get_eigen_value(matrix: pd.DataFrame):
