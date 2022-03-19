@@ -80,8 +80,14 @@ class HierarchyAnalysisMatrix:
     def get_feature_priority_vector(self):
         return HierarchyAnalysisMatrix._get_priority_vector(self._matrix_features)
 
+    def get_feature_eigen_vector(self):
+        return HierarchyAnalysisMatrix._get_eigen_vector(self._matrix_features)
+
     def get_example_priority_vector(self, feature: str):
         return HierarchyAnalysisMatrix._get_priority_vector(self._dict_matrix_examples[feature])
+
+    def get_example_eigen_vector(self, feature: str):
+        return HierarchyAnalysisMatrix._get_eigen_vector(self._dict_matrix_examples[feature])
 
     def get_feature_concord_data(self):
         return HierarchyAnalysisMatrix._get_concord_data(self._matrix_features)
@@ -117,15 +123,21 @@ class HierarchyAnalysisMatrix:
 
     @staticmethod
     def _get_priority_vector(matrix: pd.DataFrame):
-        f_count = len(matrix)
-        priority_vector = np.empty(f_count)
-        for i in range(0, f_count):
-            req_list = matrix.iloc[i]
-            priority_vector[i] = pow(np.prod(req_list), 1 / len(req_list))
-
-        norm_priority_vector = priority_vector / np.sum(priority_vector)
+        eigen_vector = HierarchyAnalysisMatrix._get_eigen_vector(matrix)
+        norm_priority_vector = eigen_vector / np.sum(eigen_vector)
 
         return norm_priority_vector
+
+    @staticmethod
+    def _get_eigen_vector(matrix: pd.DataFrame):
+        f_count = len(matrix)
+        eigen_vector = np.empty(f_count)
+        for i in range(0, f_count):
+            req_list = matrix.iloc[i]
+            eigen_vector[i] = pow(np.prod(req_list), 1 / len(req_list))
+
+        return eigen_vector
+
 
     @staticmethod
     def _get_concord_data(matrix: pd.DataFrame):

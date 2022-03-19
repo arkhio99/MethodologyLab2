@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>956</width>
+    <width>1277</width>
     <height>731</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>150</y>
-      <width>351</width>
+      <width>441</width>
       <height>261</height>
      </rect>
     </property>
@@ -27,8 +27,8 @@
    <widget class="QPushButton" name="btn_add_feature">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>48</y>
+      <x>540</x>
+      <y>46</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -47,7 +47,7 @@
      <rect>
       <x>10</x>
       <y>48</y>
-      <width>361</width>
+      <width>531</width>
       <height>27</height>
      </rect>
     </property>
@@ -78,8 +78,8 @@
    <widget class="QPushButton" name="btn_add_example">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>48</y>
+      <x>1180</x>
+      <y>38</y>
       <width>91</width>
       <height>28</height>
      </rect>
@@ -96,9 +96,9 @@
    <widget class="QLineEdit" name="text_editor_example">
     <property name="geometry">
      <rect>
-      <x>489</x>
-      <y>48</y>
-      <width>361</width>
+      <x>702</x>
+      <y>38</y>
+      <width>481</width>
       <height>27</height>
      </rect>
     </property>
@@ -111,8 +111,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>497</x>
-      <y>14</y>
+      <x>710</x>
+      <y>4</y>
       <width>191</width>
       <height>21</height>
      </rect>
@@ -129,10 +129,10 @@
    <widget class="QTableWidget" name="table_example_by_feature">
     <property name="geometry">
      <rect>
-      <x>487</x>
-      <y>180</y>
-      <width>361</width>
-      <height>231</height>
+      <x>650</x>
+      <y>170</y>
+      <width>411</width>
+      <height>241</height>
      </rect>
     </property>
    </widget>
@@ -157,8 +157,8 @@
    <widget class="QComboBox" name="list_features">
     <property name="geometry">
      <rect>
-      <x>487</x>
-      <y>150</y>
+      <x>700</x>
+      <y>140</y>
       <width>351</width>
       <height>22</height>
      </rect>
@@ -172,8 +172,8 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>487</x>
-      <y>120</y>
+      <x>700</x>
+      <y>110</y>
       <width>381</width>
       <height>21</height>
      </rect>
@@ -190,9 +190,9 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>60</x>
       <y>420</y>
-      <width>201</width>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -298,7 +298,7 @@
    <widget class="QLabel" name="lbl_eigen_value_example">
     <property name="geometry">
      <rect>
-      <x>691</x>
+      <x>904</x>
       <y>420</y>
       <width>91</width>
       <height>21</height>
@@ -316,9 +316,9 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>491</x>
+      <x>740</x>
       <y>420</y>
-      <width>201</width>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -334,7 +334,7 @@
    <widget class="QLabel" name="lbl_concord_estimate_example">
     <property name="geometry">
      <rect>
-      <x>691</x>
+      <x>904</x>
       <y>457</y>
       <width>91</width>
       <height>21</height>
@@ -352,7 +352,7 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>648</x>
+      <x>861</x>
       <y>440</y>
       <width>41</width>
       <height>16</height>
@@ -370,7 +370,7 @@
    <widget class="QLabel" name="lbl_concord_index_example">
     <property name="geometry">
      <rect>
-      <x>691</x>
+      <x>904</x>
       <y>438</y>
       <width>91</width>
       <height>21</height>
@@ -388,7 +388,7 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>647</x>
+      <x>860</x>
       <y>460</y>
       <width>41</width>
       <height>16</height>
@@ -406,9 +406,9 @@
    <widget class="QPushButton" name="btn_calc_feature_priority">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>120</y>
-      <width>91</width>
+      <x>460</x>
+      <y>119</y>
+      <width>181</width>
       <height>28</height>
      </rect>
     </property>
@@ -424,10 +424,10 @@
    <widget class="QPushButton" name="btn_calc_example_priority_by_feature">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>146</y>
-      <width>93</width>
-      <height>28</height>
+      <x>1070</x>
+      <y>140</y>
+      <width>201</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -442,7 +442,7 @@
    <widget class="QPushButton" name="btn_calc_example_priotity">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>470</x>
       <y>490</y>
       <width>311</width>
       <height>31</height>
@@ -461,8 +461,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>81</y>
-      <width>131</width>
+      <y>80</y>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
@@ -475,9 +475,9 @@
    <widget class="QComboBox" name="cb_feature_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>81</y>
-      <width>141</width>
+      <x>250</x>
+      <y>80</y>
+      <width>211</width>
       <height>31</height>
      </rect>
     </property>
@@ -490,9 +490,9 @@
    <widget class="QLineEdit" name="text_editor_feature_priority">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>81</y>
-      <width>91</width>
+      <x>460</x>
+      <y>80</y>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>
@@ -500,8 +500,8 @@
    <widget class="QPushButton" name="btn_set_feature_priority">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>81</y>
+      <x>540</x>
+      <y>79</y>
       <width>93</width>
       <height>31</height>
      </rect>
@@ -518,9 +518,9 @@
    <widget class="QComboBox" name="cb_example_1">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>80</y>
-      <width>131</width>
+      <x>703</x>
+      <y>70</y>
+      <width>191</width>
       <height>31</height>
      </rect>
     </property>
@@ -533,8 +533,8 @@
    <widget class="QLineEdit" name="text_editor_example_priority">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>80</y>
+      <x>1090</x>
+      <y>70</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -543,9 +543,9 @@
    <widget class="QComboBox" name="cb_example_2">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>80</y>
-      <width>141</width>
+      <x>890</x>
+      <y>70</y>
+      <width>201</width>
       <height>31</height>
      </rect>
     </property>
@@ -558,8 +558,8 @@
    <widget class="QPushButton" name="btn_set_example_priority">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>80</y>
+      <x>1180</x>
+      <y>70</y>
       <width>93</width>
       <height>31</height>
      </rect>
@@ -576,29 +576,29 @@
    <widget class="QTableWidget" name="table_feature_priorities">
     <property name="geometry">
      <rect>
-      <x>373</x>
-      <y>150</y>
+      <x>560</x>
+      <y>149</y>
       <width>81</width>
       <height>261</height>
      </rect>
     </property>
    </widget>
-   <widget class="QTableWidget" name="table_example_priorities_by_deature">
+   <widget class="QTableWidget" name="table_example_priorities_by_feature">
     <property name="geometry">
      <rect>
-      <x>857</x>
-      <y>180</y>
-      <width>81</width>
-      <height>231</height>
+      <x>1177</x>
+      <y>170</y>
+      <width>91</width>
+      <height>241</height>
      </rect>
     </property>
    </widget>
    <widget class="QTableWidget" name="table_example_priorities">
     <property name="geometry">
      <rect>
-      <x>35</x>
+      <x>15</x>
       <y>530</y>
-      <width>891</width>
+      <width>1251</width>
       <height>192</height>
      </rect>
     </property>
@@ -614,6 +614,26 @@
     </property>
     <property name="text">
      <string>Загрузить пример</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="table_feature_eigen_vector">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>149</y>
+      <width>91</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="table_example_eigen_vector_by_feature">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>170</y>
+      <width>101</width>
+      <height>241</height>
+     </rect>
     </property>
    </widget>
   </widget>
